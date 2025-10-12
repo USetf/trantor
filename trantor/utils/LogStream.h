@@ -21,6 +21,7 @@
 #include <assert.h>
 #include <string.h>  // memcpy
 #include <string>
+#include <string_view>
 
 namespace trantor
 {
@@ -194,7 +195,11 @@ class TRANTOR_EXPORT LogStream : NonCopyable
     {
         return operator<<(reinterpret_cast<const char *>(str));
     }
-
+    self &operator<<(std::string_view v){
+        append(v.data(), v.length());
+        return *this;
+    }
+    
     self &operator<<(const std::string &v)
     {
         append(v.c_str(), v.size());

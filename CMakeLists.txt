@@ -293,7 +293,7 @@ if(NOT ATOMIC_WITHOUT_LINKING)
 endif()
 file(REMOVE ${CMAKE_BINARY_DIR}/test_atomic.cpp)
 
-set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 14)
+set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 17)
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD_REQUIRED ON)
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_EXTENSIONS OFF)
 set_target_properties(${PROJECT_NAME} PROPERTIES EXPORT_NAME Trantor)
